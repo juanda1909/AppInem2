@@ -163,7 +163,7 @@ infinite; }
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: #fff;
+  background: #088a32;
   transition: all 0.5s;
   z-index: 997;
   height: 86px;
@@ -276,7 +276,12 @@ infinite; }
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: #008000;
+  color: #ffffff; 
+}
+
+.navbar .active a:hover,
+.navbar li:hover>a[href="#Login"] {
+  color: #ffcc00; 
 }
 
 .navbar .dropdown ul {
@@ -754,29 +759,35 @@ html, body {
   position: absolute;
 }
 
+/* Estilo personalizado para el eslogan */
 #hero h1 {
-  padding: 50px;
-  height: 60%;
-  left: 45%;
-  margin: 0;
+  padding: 30px 0;
+  text-align: center;
   font-size: 48px;
-  font-weight: 500;
+  font-weight: 600;
   z-index: 2;
-  line-height: 56px;
-  color: red;
-  font-family: "Poppins", sans-serif; 
+  line-height: 1.2;
+  font-family: "Poppins", sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-#hero  h1 span{
+/* Estilo para "App" en rojo */
+#hero h1 span.red-text {
+  color: red;
+}
+
+/* Estilo para "Inem" en amarillo */
+#hero h1 span.yellow-text {
   color: yellow;
 }
 
-#hero  h1 a span{
+/* Estilo para el punto después de "Inem" en verde */
+#hero h1 a span {
   color: green;
 }
 
 #hero h2 {    
-  color: #555555;
+  color: rgb(255, 0, 0);
   margin: 5px 0 30px 0;
   font-size: 24px;
   font-weight: 400;
@@ -801,21 +812,24 @@ html, body {
 }
 
 #hero .btn-watch-video {
-  font-size: 16px;
-  transition: 0.5s;
-  margin-left: 25px;
-  color: #222222;
+  font-size: 18px; /* Aumentamos el tamaño de fuente */
+  transition: 0.3s; /* Reducimos la duración de la transición para que sea más rápida */
+  margin-left: 20px; /* Ajustamos el margen izquierdo */
+  color: #ffcc00; /* Establecemos el color amarillo para el texto por defecto */
   font-weight: 600;
-  display: flex;
-  align-items: center;
+  display: inline-block; /* Cambiamos a display en línea para que el enlace ocupe solo el espacio necesario */
+  padding: 10px 20px; /* Agregamos relleno para hacer el enlace más grande y atractivo */
+  border: 2px solid #ffcc00; /* Agregamos un borde amarillo */
+  border-radius: 5px; /* Agregamos bordes redondeados */
+  text-decoration: none; /* Quitamos el subrayado del enlace */
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
-#hero .btn-watch-video i {
-  color: #008000;
-  font-size: 32px;
-  transition: 0.3s;
-  line-height: 0;
-  margin-right: 8px;
+#hero .btn-watch-video:hover {
+  background-color: #ffcc00; /* Cambiamos el fondo a amarillo al pasar el cursor */
+  color: #222222; /* Cambiamos el color del texto a negro al pasar el cursor */
+  border-color: #222222; /* Cambiamos el color del borde a negro al pasar el cursor */
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
 #hero .btn-watch-video:hover {
@@ -871,7 +885,10 @@ html, body {
 section {
   padding: 60px 0;
   overflow: hidden;
+  background-color: #088a32;
+  color: #fff; /* Cambiamos el color del texto a blanco para que sea legible en el fondo verde */
 }
+
 
 .section-bg {
   background-color: #f6f9fe;
@@ -883,16 +900,13 @@ section {
 }
 
 .section-title h2 {
-  font-size: 13px;
+  font-size: 24px;
   letter-spacing: 1px;
   font-weight: 700;
-  padding: 8px 20px;
   margin: 0;
-  background: #e7f1fd;
-  color: #008000;
-  display: inline-block;
+  color: black;
   text-transform: uppercase;
-  border-radius: 50px;
+  font-family: 'Montserrat', sans-serif; /* Utilizando la fuente Montserrat */
 }
 
 .section-title h3 {
@@ -1095,7 +1109,8 @@ section {
 }
 
 .about .content ul p {
-  font-size: 15px;
+  font-size: 18px;
+  color: #111;
 }
 
 .about .content p:last-child {
@@ -1811,8 +1826,17 @@ section {
 .contact .info-box {
   color: #444444;
   text-align: center;
-  box-shadow: 0 0 30px rgba(214, 215, 216, 0.3);
-  padding: 20px 0 30px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sutil sombra */
+  padding: 20px;
+  background-color: #ffffff; /* Fondo blanco */
+  border: 2px solid #088a32; /* Borde de 2 píxeles en verde (#088a32) */
+  border-radius: 10px; /* Bordes redondeados */
+  margin-bottom: 30px; /* Espacio entre las .info-box */
+  transition: transform 0.3s ease-in-out; /* Efecto de transición suave */
+}
+
+.contact .info-box:hover {
+  transform: translateY(-5px); /* Levantar ligeramente al pasar el cursor */
 }
 
 .contact .info-box i {
@@ -1840,6 +1864,24 @@ section {
 .contact .php-email-form {
   box-shadow: 0 0 30px rgba(214, 215, 216, 0.4);
   padding: 30px;
+  background-color: #ffffff; /* Fondo blanco */
+  border-radius: 10px; /* Bordes redondeados */
+  border: 2px solid #088a32; /* Borde verde */
+}
+
+.contact .php-email-form input[type="text"],
+.contact .php-email-form input[type="email"],
+.contact .php-email-form textarea {
+  border: 2px solid #088a32; /* Borde verde para los campos de entrada */
+  border-radius: 5px; /* Bordes redondeados para los campos de entrada */
+  padding: 10px; /* Relleno */
+}
+
+.contact .php-email-form input[type="text"]:focus,
+.contact .php-email-form input[type="email"]:focus,
+.contact .php-email-form textarea:focus {
+  border-color: #106eea; /* Cambiamos el color del borde al enfocar los campos */
+  outline: none; /* Quitamos el borde de enfoque predeterminado */
 }
 
 .contact .php-email-form .error-message {
