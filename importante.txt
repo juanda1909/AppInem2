@@ -12,3 +12,17 @@
 4 Vincular con la base de datos
 ├──Los estudiantes
 ├──Los profesores
+
+5 Falta crear el apartado de los profesores
+
+6 Borrar codigo innecesario
+├── Borrar codigo innecesario
+
+7 Falta terminar el apartado de los estudiantes
+├── horario
+├── mapa
+├── notas
+
+8 Falta terminar el apartado de los profesores
+├── vinculacion horario ?
+├── ns que mas
