@@ -1,1 +1,5 @@
 1 Como hacemos funcional el formulario de contacto?
+├──se necesita la version premiun toca buscar como hacerlo funcional
+
+2 en login.html realizar un carrusel de imagenes
+├──Implica tomar mas fotos del colegio
